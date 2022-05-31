@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"><!--レスポンシブデザインの設定 -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
@@ -16,19 +15,7 @@
             crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/chat.css">
         <title>chat</title>
-        <script>
-            function onClick() {
-                    const $inputText = $('input[name="user_talk"]');
-                    const text = $inputText.val();
-                    console.log(text);
-                    $('#output').html(text);
-                    if(!text) {
-                        console.log("none");
-                        return
-                    }
-                }
-
-        </script>
+        <script type="text/javascript" src="js/input_value.js"></script>
     </head>
     <body>
         <!-- 画面に表示されるエリアの開始 -->
@@ -59,6 +46,34 @@
                 </div>
             </div>
         </div>
+        
+        <div id="target"></div>
+        <button id="btn_change_img" class="btn btn-primary" type="button" >切り替え</button>
+        
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <h2>問1.1</h2>
+        <div class="form-group">
+            <label for="select1">あなたはグラフのどこに注目しますか？:</label>
+            <select id="select1" class="form-control">
+                <option>最大値</option>
+                <option>最小値</option>
+                <option>合計</option>
+                <option>順位</option>
+                <option>差</option>
+                <option>各値</option>
+            </select>
+        </div>
+        <script type="text/javascript" src="js/print_img.js"></script>
     </body><!-- 画面に表示されるエリアの終了 -->
     
 </html>

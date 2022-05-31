@@ -1,0 +1,15 @@
+{   
+
+    "0":{
+            "id": 1,
+            "filename": "img/1.png"
+    },
+    "1":{
+            "id": 2,
+            "filename": "img/operator.jpg"
+    },
+    "2":{
+            "id":3,
+            "filename": "img/2.png"
+    }
+}
