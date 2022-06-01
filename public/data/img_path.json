@@ -1,15 +1,17 @@
-{   
-
-    "0":{
-            "id": 1,
-            "filename": "img/1.png"
-    },
-    "1":{
-            "id": 2,
-            "filename": "img/operator.jpg"
-    },
-    "2":{
-            "id":3,
-            "filename": "img/2.png"
-    }
-}
+[
+        {"id":"1",
+        "graph_img":"img/1.png",
+        "class_img":"img/2.png",
+        "num_class":3
+        },
+        {"id":"2",
+        "graph_img":"img/2.png",
+        "class_img":"img/1.png",
+        "num_class":2
+        },
+        {"id":"3",
+        "graph_img":"img/operator.jpg",
+        "class_img":"img/1.png",
+        "num_class":1
+        }
+]

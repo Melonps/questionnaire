@@ -3,6 +3,8 @@ var bt = document.getElementById('btn_change_img');
 
 var data_num = 3;
 var path;
+var graph_path;
+var class_path;
 
 bt.addEventListener( 'click', function( e ) {
 
@@ -19,8 +21,9 @@ bt.addEventListener( 'click', function( e ) {
         .then(
             // 取得成功時
             function (json) {
-                console.log(json[selectnum].filename);
-                path = json[selectnum].filename;
+                console.log(json[selectnum].graph_img);
+                graph_path = json[selectnum].graph_img;
+                class_path = json[selectnum].class_img;
         },
         function () {
             // エラー発生時
@@ -29,8 +32,12 @@ bt.addEventListener( 'click', function( e ) {
         );
     });
     
-    console.log('data', path);
+    console.log('data', graph_path);
+    console.log('data', class_path);
 
-var element = '<img src="' + path + '" alt="" />';
-    target.innerHTML = element;
-    }, false );
+    var element_1 = '<img src="' + graph_path + '" alt="" />';
+    var element_2 = '<img src="' + class_path + '" alt="" />';
+    graph_img.innerHTML = element_1;
+    class_img.innerHTML = element_2;
+}, false);
+    

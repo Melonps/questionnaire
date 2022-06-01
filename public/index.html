@@ -20,16 +20,7 @@
     <body>
         <!-- 画面に表示されるエリアの開始 -->
         Hello Worlds
-        <div id="container">
-            <div id="talks"></div>
-            <div id="send" class="m-2">
-                <div id="input_1" class="input-group">
-                    <input type="text" name="user_talk" id="form_1" class="form-control" placeholder="入力してください" aria-label="Recipient's username" aria-describedby="button-addon2" >
-                    <button id="send_btn" class="btn btn-primary" type="button" onclick="onClick();">送信</button>
-                </div>
-            </div>
-        </div>
-        <div id="output"></div>
+        
         <div id="templates">
             <div class="bot-template d-flex flex-row ml-2 mr-2">
                 <div class="operator rounded bg-secondary mr-2"></div>
@@ -47,33 +38,59 @@
             </div>
         </div>
         
-        <div id="target"></div>
+        <div id="graph_img"></div>
+        <div id="class_img"></div>
         <button id="btn_change_img" class="btn btn-primary" type="button" >切り替え</button>
         
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
         <h2>問1.1</h2>
         <div class="form-group">
-            <label for="select1">あなたはグラフのどこに注目しますか？:</label>
-            <select id="select1" class="form-control">
-                <option>最大値</option>
-                <option>最小値</option>
-                <option>合計</option>
-                <option>順位</option>
-                <option>差</option>
-                <option>各値</option>
+            <label for="q_1">あなたはグラフのどこに注目しますか？:</label>
+            <select id="q_1" class="form-control">
+                <option value="max">最大値</option>
+                <option value="min">最小値</option>
+                <option value="sum">合計</option>
+                <option value="sorted">順位</option>
+                <option value="diff">差</option>
+                <option value="each">各値</option>
             </select>
         </div>
+        <p>選択したもの <span id="span1"></span></p>
+        <h2>問1.2</h2>
+        <div class="form-group">
+            <label for="q_2">それはどのグループの範囲ですか？</label>
+            <select id="q_2" class="form-control">
+                <option value="ALL">全て</option>
+                <option value="g_1">グループ1</option>
+                <option value="g_2">グループ2</option>
+                <option value="g_3">グループ3</option>
+            </select>
+            
+        </div>
+        <h2>問1.3</h2>
+        <div class="form-group">
+            <label for="q_3">それはどのグループの範囲ですか？</label>
+            <select id="q_3" class="form-control">
+                <option value="equal">その値自体に注目</option>
+                <option value="larger">ある値より大きいことに注目</option>
+                <option value="smaller">ある値より小さいことに注目</option>
+            </select>
+        </div>
+        <h2>問1.4</h2>
+        <div id="container">
+            <div id="send" class="m-2">
+                <label for="q_4">比較が必要な場合、比較する数値を教えてください</label>
+                <div id="input_1" class="input-group">
+                    
+                    <input type="text" name="user_talk" id="form_1" class="form-control" placeholder="入力してください"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button id="send_btn" class="btn btn-primary" type="button" onclick="onClick();">送信</button>
+                </div>
+            </div>
+        </div>
+        <button id="send_form" class="btn btn-primary" type="button" onclick="sendform();">回答を送信</button>
+        <div id="output"></div>
         <script type="text/javascript" src="js/print_img.js"></script>
+        <script type="text/javascript" src="js/send_output.js"></script>
     </body><!-- 画面に表示されるエリアの終了 -->
     
 </html>
