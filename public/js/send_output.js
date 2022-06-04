@@ -1,5 +1,8 @@
-var data_ans = []
-var each_ans = []
+var data_ans = [];
+var each_ans = [];
+var q = location.search.substring(1);
+var a = q.split("=")[1];
+console.log(a);
 
 function sendform() {
     const ans_1 = document.getElementById("q_1").value;

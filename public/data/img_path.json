@@ -1,17 +1,17 @@
 [
         {"id":"1",
-        "graph_img":"img/1.png",
-        "class_img":"img/2.png",
+        "graph_img":"img_data/1.png",
+        "class_img":"img_data/2.png",
         "num_class":3
         },
         {"id":"2",
-        "graph_img":"img/2.png",
-        "class_img":"img/1.png",
+        "graph_img":"img_data/2.png",
+        "class_img":"img_data/1.png",
         "num_class":2
         },
         {"id":"3",
-        "graph_img":"img/operator.jpg",
-        "class_img":"img/1.png",
+        "graph_img":"img_data/operator.jpg",
+        "class_img":"img_data/1.png",
         "num_class":1
         }
 ]

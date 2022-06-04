@@ -13,84 +13,26 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./css/chat.css">
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/defalut.css">
         <title>chat</title>
     </head>
     <body>
         <!-- 画面に表示されるエリアの開始 -->
-        Hello Worlds
-        
-        <div id="templates">
-            <div class="bot-template d-flex flex-row ml-2 mr-2">
-                <div class="operator rounded bg-secondary mr-2"></div>
-                <div class="alert alert-success message" role="alert">
-                    <div class="spinner-grow spinner-grow-sm" role="alert">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                    <div class="spinner-grow spinner-grow-sm" role="alert">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                    <div class="spinner-grow spinner-grow-sm" role="alert">
-                        <span class="sr-only">Loading...</span>
-                    </div>
+        <div class="image_header"><img src="img/header.png"></div>
+        <div class="container">
+            <div class="page-lock">
+                <h1>アンケート調査ページ</h1>
+                <div class="page-body">
+                    <form action="./question.html" method="GET">
+                        <input class="form-control placeholder-no-fix" id="login" type="number" autocomplete="off" placeholder="Id" name="Id" />
+                        <button type="next_page" class="btn btn-primary btn-lg btn-block" onclick="login_Click()">Login</button>
+                    </form>
+                    
                 </div>
             </div>
         </div>
-        
-        <div id="graph_img"></div>
-        <div id="class_img"></div>
-        <button id="btn_change_img" class="btn btn-primary" type="button" >切り替え</button>
-        
-        <h2>問1.1</h2>
-        <div class="form-group">
-            <label for="q_1">あなたはグラフのどこに注目しますか？:</label>
-            <select id="q_1" class="form-control">
-                <option value="max">最大値</option>
-                <option value="min">最小値</option>
-                <option value="sum">合計</option>
-                <option value="sorted">順位</option>
-                <option value="diff">差</option>
-                <option value="each">各値</option>
-            </select>
-        </div>
-        <p>選択したもの <span id="span1"></span></p>
-        <h2>問1.2</h2>
-        <div class="form-group">
-            <label for="q_2">それはどのグループの範囲ですか？</label>
-            <select id="q_2" class="form-control">
-                <option value="ALL">全て</option>
-                <option value="g_1">グループ1</option>
-                <option value="g_2">グループ2</option>
-                <option value="g_3">グループ3</option>
-            </select>
-            
-        </div>
-        <h2>問1.3</h2>
-        <div class="form-group">
-            <label for="q_3">それはどのグループの範囲ですか？</label>
-            <select id="q_3" class="form-control">
-                <option value="equal">その値自体に注目</option>
-                <option value="larger">ある値より大きいことに注目</option>
-                <option value="smaller">ある値より小さいことに注目</option>
-            </select>
-        </div>
-        <h2>問1.4</h2>
-        <div id="container">
-            <div id="send" class="m-2">
-                <label for="q_4">比較が必要な場合、比較する数値を教えてください</label>
-                <div id="input_1" class="input-group">
-                    <input type="number" name="user_talk" id="q_4" class="form-control" placeholder="入力してください"
-                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button id="send_btn" class="btn btn-primary" type="button" onclick="onClick();">送信</button>
-                </div>
-            </div>
-        </div>
-        <button id="send_form" class="btn btn-primary" type="button" onclick="sendform();">回答を送信</button>
-        <div id="output"></div>
-        <script type="text/javascript" src="js/get_json.js"></script>
-        <script type="text/javascript" src="js/print_img.js"></script>
-        <script type="text/javascript" src="js/send_output.js"></script>
-        <script type="text/javascript" src="js/input_value.js"></script>
+        <script type="text/javascript" src="js/setup.js"></script>
         <script type="text/javascript" src="js/debag.js"></script>
     </body><!-- 画面に表示されるエリアの終了 -->
     
