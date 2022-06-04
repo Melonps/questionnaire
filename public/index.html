@@ -15,7 +15,6 @@
             crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/chat.css">
         <title>chat</title>
-        <script type="text/javascript" src="js/input_value.js"></script>
     </head>
     <body>
         <!-- 画面に表示されるエリアの開始 -->
@@ -80,8 +79,7 @@
             <div id="send" class="m-2">
                 <label for="q_4">比較が必要な場合、比較する数値を教えてください</label>
                 <div id="input_1" class="input-group">
-                    
-                    <input type="text" name="user_talk" id="form_1" class="form-control" placeholder="入力してください"
+                    <input type="number" name="user_talk" id="q_4" class="form-control" placeholder="入力してください"
                         aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button id="send_btn" class="btn btn-primary" type="button" onclick="onClick();">送信</button>
                 </div>
@@ -89,8 +87,11 @@
         </div>
         <button id="send_form" class="btn btn-primary" type="button" onclick="sendform();">回答を送信</button>
         <div id="output"></div>
+        <script type="text/javascript" src="js/get_json.js"></script>
         <script type="text/javascript" src="js/print_img.js"></script>
         <script type="text/javascript" src="js/send_output.js"></script>
+        <script type="text/javascript" src="js/input_value.js"></script>
+        <script type="text/javascript" src="js/debag.js"></script>
     </body><!-- 画面に表示されるエリアの終了 -->
     
 </html>
